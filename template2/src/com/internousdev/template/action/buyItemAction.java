@@ -6,7 +6,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 
-public class buyItemAction extends ActionSupport implements SessionAware{
+public class BuyItemAction extends ActionSupport implements SessionAware{
 	private int stock;
 	private String pay;
 	private Map<String,Object>session;
