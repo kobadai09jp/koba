@@ -1,3 +1,12 @@
+h1{
+	text-align: center;
+	text-shadow: 2px 1px 1px #fff;
+
+}
+body{
+	background-color:skyblue;
+}
+
 .container{
 	font-family: 'Courier New',sans-serif;
 	width:300px;
