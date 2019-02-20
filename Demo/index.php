@@ -1,14 +1,14 @@
 <?php
-$con = new mysqli ("localhost","root","mysql","social");
-echo "a";
-if(mysqli_connect_errno()){
-	echo "b";
+$con = new mysqli ("localhost","root","mysqla","social");
 
-	echo "Failed to connect:" . mysql_connect_errno();
+if(mysqli_connect_errno()){
+
+
+	echo "Failed to connect:" , mysqli_connect_errno();
 }
-echo "c";
+
 $query = mysqli_query($con,"INSERT INTO test VALUES(null,'AAAAA')");
-echo "d";
+
 ?>
 <!DOCTYPE html>
 <html>
