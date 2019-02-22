@@ -1,15 +1,8 @@
 <?php
-$con = new mysqli ("localhost","root","mysqla","social");
-
-if(mysqli_connect_errno()){
-
-
-	echo "Failed to connect:" , mysqli_connect_errno();
-}
-
-$query = mysqli_query($con,"INSERT INTO test VALUES(null,'AAAAA')");
+require 'config/config.php';
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,3 +12,4 @@ $query = mysqli_query($con,"INSERT INTO test VALUES(null,'AAAAA')");
 	<p>Hello</p>
 </body>
 </html>
+
