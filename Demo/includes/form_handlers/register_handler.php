@@ -14,24 +14,24 @@ if(isset($_POST['register_button'])){
 
 	//firstname
 	$fname = strip_tags($_POST['reg_fname']); //Remove html Tag
-	//$fname = str_replace(' ', '', $fname)($_POST['reg_fname']); //Remove Space
+	$fname = str_replace(' ', '', $fname); //Remove Space
 	$fname = ucfirst(strtolower($fname)); //Uppercase firstlater
 	$_SESSION['reg_fname'] = $fname; //firstname into session
 
 	//lastname
 	$lname = strip_tags($_POST['reg_lname']); //Remove html Tag
-	// $lname = str_replace(' ', '', $lname)($_POST['reg_lname']); //Remove Space
+	$lname = str_replace(' ', '', $lname);//Remove Space
 	$lname = ucfirst(strtolower($lname)); 
 	$_SESSION['reg_lname'] = $lname; //firstname into session
 
 	//email
 	$em = strip_tags($_POST['reg_email']); //Remove html Tag
-	// $em = str_replace(' ', '', $em)($_POST['reg_email']); //Remove Space
+	$em = str_replace(' ', '', $em);//Remove Space
 	$em = ucfirst(strtolower($em)); //Uppercase firstlater	//Uppercase firstlater
 	$_SESSION['reg_email'] = $em; //firstname into session	
 	//email2
 	$em2 = strip_tags($_POST['reg_email2']); //Remove html Tag
-	// $em2 = str_replace(' ', '', $em2)($_POST['reg_email2']); //Remove Space
+	$em2 = str_replace(' ', '', $em2); ///Remove Space
 	$em2 = ucfirst(strtolower($em2)); //Uppercase firstlater
 	$_SESSION['reg_email2'] = $em2; //firstname into session
 
@@ -49,10 +49,10 @@ if(isset($_POST['register_button'])){
 
 			$em = filter_var($em, FILTER_VALIDATE_EMAIL);
 
-			//check if email already exiats
+			//emailをすでに使っているか確認
 			$e_check = mysqli_query($con,"SELECT email FROM users WHERE email = '$em'");
 
-			//Count the number of returend
+			//文字数を確認
 			$num_rows = mysqli_num_rows($e_check);
 
 			if($num_rows > 0){
@@ -66,6 +66,7 @@ if(isset($_POST['register_button'])){
 	}else{
 		array_push($error_array,"Email don't match<br>");
 	}
+
 
 	if(strlen($fname) > 25 || strlen($fname)<2){
 		array_push($error_array,"Your first name must be betwwn 2 and 25 characters<br>");
@@ -103,7 +104,7 @@ if(isset($_POST['register_button'])){
 		$profile_pic ="assets/images/profile_pics/defaults/head_emerald.png";
 
 	// $query = mysqli_query($con, "INSERT INTO users VALUES ( , '$fname','$lname','$username','$em','$password','$date','$profile_pic','0','0','no',',')");
-	$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+	$query = mysqli_query($con, "INSERT INTO users VALUES (31, '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
 
 
 
@@ -114,8 +115,6 @@ if(isset($_POST['register_button'])){
 	$_SESSION['reg_lname'] = "";
 	$_SESSION['reg_email'] = "";
 	$_SESSION['reg_email2'] = "";
-
-	echo "Error: " . mysqli_error($con);
 
 	}
 
