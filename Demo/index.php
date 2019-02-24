@@ -1,5 +1,15 @@
+
+
+
 <?php
 	include("includes/header.php");
+	include("includes/classes/User.php");
+	include("includes/classes/Post.php");
+
+	if(isset($_POST['post'])){
+		$post = new Post($con,$userLoggedIn);
+		$post ->submitPost($_POST['post_text'], 'none');
+	}
 	// session_destroy();
 ?>
 <div class="user_details colum">
@@ -26,8 +36,11 @@
 		<hr>
 	</form>
 	
-</div>
 
+<?php
+	$post = new Post($con,$userLoggedIn);
+	$post->loadPostsFriends();
+?>
 
 
 </div>

@@ -39,6 +39,7 @@ if(isset($_SESSION['username'])){
 			<a href="#"><i class="fas fa-bell"></i></i></a>
 			<a href="#"><i class="fas fa-users"></i></i></a>
 			<a href="#"><i class="fas fa-cogs"></i></i></a>
+			<a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></i></a>
 		</nav>
 	</div>
 
