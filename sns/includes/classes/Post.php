@@ -22,7 +22,7 @@ class Post{
 		if($user_to == $added_by){
 			$user_to = "none";
 		}
-		$query = mysqli_query($this->con, "INSERT INTO posts VALUES(10, '$body', '$added_by', '$user_to', '$date_added', 'no', 'no', '0')");
+		$query = mysqli_query($this->con, "INSERT INTO posts VALUES(null, '$body', '$added_by', '$user_to', '$date_added', 'no', 'no', '0')");
 		$returned_id = mysqli_insert_id($this->con);
 		
 
@@ -135,7 +135,8 @@ class Post{
 							<br>
 						</div>
 
-					</div>";		
+					</div>
+					<hr>";		
 
 		}
 		echo $str;

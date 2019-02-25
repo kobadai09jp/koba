@@ -103,8 +103,7 @@ if(isset($_POST['register_button'])){
 		else if ($rand == 2)
 		$profile_pic ="assets/images/profile_pics/defaults/head_emerald.png";
 
-	// $query = mysqli_query($con, "INSERT INTO users VALUES ( , '$fname','$lname','$username','$em','$password','$date','$profile_pic','0','0','no',',')");
-	$query = mysqli_query($con, "INSERT INTO users VALUES (31, '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+	$query = mysqli_query($con, "INSERT INTO users VALUES (null, '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
 
 
 
