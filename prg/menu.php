@@ -1,15 +1,17 @@
 <?php
 
  class Menu{
- 	private $name;
- 	private $price;
- 	private $image;
- 	private $orderCount = 0;
+ 	protected $name;
+ 	protected $price;
+ 	protected $image;
+ 	protected $orderCount = 0;
+ 	protected static $count = 0;
 
  	public function __construct($name,$price,$image){
  		$this->name = $name;
  		$this->price = $price;
  		$this->image = $image;
+ 		self::$count++;
  	}
 
  	public function hello(){
@@ -38,5 +40,8 @@
 
  	public function getTotalPrice(){
  		return $this->getTaxIncludedPrice() * $this->orderCount;
+ 	}
+ 	public function getCount(){
+ 		return self::$count;
  	}
  }

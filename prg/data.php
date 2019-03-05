@@ -1,11 +1,12 @@
 <?php
 
-require_once('menu.php');
+require_once('drink.php');
+require_once('food.php');
 
- $juice = new Menu('JUICE',6,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png');
- $coffee = new Menu('COFFEE',3,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png');
- $curry = new Menu('CURRY',9,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/curry.png');
- $pasta = new Menu('PASTA',12,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png');
+ $juice = new Drink('JUICE',6,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png','cold');
+ $coffee = new Drink('COFFEE',3,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png','hot');
+ $curry = new Food('CURRY',9,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/curry.png',3);
+ $pasta = new Food('PASTA',12,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png',1);
 
 
  $menus = array($juice,$coffee,$curry,$pasta);
