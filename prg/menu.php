@@ -41,7 +41,26 @@
  	public function getTotalPrice(){
  		return $this->getTaxIncludedPrice() * $this->orderCount;
  	}
+
+ 	public function getReviews($reviews){
+ 		$reviewsForName =array();
+ 		foreach($reviews as $review){
+ 			if($review->getMenuName() == $this->name){
+ 				$reviewsForMenu[]= $review;
+ 			}
+ 		}
+ 	}
+
+
  	public function getCount(){
  		return self::$count;
+ 	}
+
+ 	public static function findByName($menus,$name){
+ 		foreach($menus as $menu){
+ 			if($menu->getName()==$name){
+ 				return $menu;
+ 			}
+ 		}
  	}
  }

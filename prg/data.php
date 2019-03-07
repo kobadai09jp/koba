@@ -2,6 +2,7 @@
 
 require_once('drink.php');
 require_once('food.php');
+require_once('review.php');
 
  $juice = new Drink('JUICE',6,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png','cold');
  $coffee = new Drink('COFFEE',3,'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png','hot');
@@ -10,5 +11,12 @@ require_once('food.php');
 
 
  $menus = array($juice,$coffee,$curry,$pasta);
+
+ $review1 = new Review($juice->getName(),'Yummy');
+
+ $review2 = new Review($curry->getName(),'Very Hot!');
+
+ $reviews = array($review1,$review2);
+
 
  ?>

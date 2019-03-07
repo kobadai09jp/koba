@@ -1,3 +1,8 @@
+<?php
+// エラーを出力する
+ini_set('display_errors', "On");
+?>
+
 <?php 
 require_once('data.php');
 require_once('menu.php');
@@ -20,7 +25,11 @@ require_once('menu.php');
         <?php foreach ($menus as $menu): ?>
           <div class="menu-item">
             <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
-            <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
+            <h3 class="menu-item-name">
+              <a href="show.php?name=<?php echo $menu->getName() ?>">
+              <?php echo $menu->getName() ?>
+            </a>
+              </h3>
             <?php if ($menu instanceof Drink): ?>
               <p class="menu-item-type"><?php echo $menu->getType() ?></p>
             <?php else: ?>
