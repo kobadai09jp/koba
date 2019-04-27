@@ -1,0 +1,9 @@
+h1,h2,p{
+    border:1px solid gray;
+}
+img{
+    float: right;
+}
+h2{
+    clear: right;
+}
