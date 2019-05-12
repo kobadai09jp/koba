@@ -4,6 +4,7 @@
 body{
     font-family: "メイリオ",Meiryo;
     color:#434343;
+    background-color:#f6f6f6;
 }
 a{
     color:#434343;
@@ -47,8 +48,61 @@ nav ul li:last-child{
     border-right:1px dotted #434343;
     padding-right:20px;
 }
-.clear-fix:after{
-    content: " ";
+.clear-fix::after{
+    content:"";
     display:block;
     clear:both;
+}
+/* main_wrapper */
+#main_wrapper{
+    width:960px;
+    height:auto;
+    margin: 30px auto 0;
+    clear:both;
+}
+#top_picup{
+    width: 582px;
+    height:360px;
+    background-color: #fff;
+    float:left;
+    margin-right:30px;
+    border:1px solid #dcddef;
+    position:relative;
+}
+#picup_thumb{
+    width:580px;
+    height: 256px;
+    margin:0;
+    
+}
+#picup_box{
+    background-color:rgba(246,172,77,.8);
+    position: absolute;
+    top:0;
+    right:0;
+    margin:0;
+    color:#fff;
+    padding:10px;
+    font-size:14px;
+    width:auto;
+    height:32px;
+}
+#top_picup dl dt a{
+    font-size:18px;
+    font-weight: bold;
+}
+#top_picup dl{
+    padding:15px 20px;
+}
+#top_picup dl dd{
+    font-size:12px;
+    font-weight:bold;
+    color:#dcdddf;
+    margin:0;
+}
+#top_ranking{
+    width:308px;
+    height:360px;
+    background-color:greenyellow;
+    float:left;
 }
