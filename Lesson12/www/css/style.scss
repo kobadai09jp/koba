@@ -1,0 +1,127 @@
+section,nav,article,aside,hgroup,header,footer,figure,figcaption,summary { display: block; margin:0; padding:0; }
+
+caption,th { margin: auto; text-align: left; }
+img { border: 0; vertical-align: bottom; }
+address,caption,th { font-weight: normal; font-style: normal; }
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+/* body,Anchor
+------------------------------------------------*/
+body {
+	margin:0;
+	padding:0;
+	background: #fff;
+	color: #222;
+	font-size: 16px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+a:link { color: #4183c1; }
+a:visited { color: #86abcd; }
+a:hover {
+	background: #fffeef;
+	color: #ce4646;
+	text-decoration: none;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+// header
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    p{
+        font-size: 12px;
+    }
+}
+// navgation
+.navgation{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    list-style-type: none;
+    margin-top: 20px;
+    li{
+        background-color: #1a7b24;
+        padding: 10px 53px;
+        border-radius: 5px;
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+.visual{
+    margin-top: 15px;
+}
+
+// content
+.content{
+	margin-top: 20px;
+	h2{
+		background: #d1e4d3;
+		border-top: 4px solid #007014;
+		padding: 10px;
+		font-size: 20px;
+	}
+	h3{
+		margin-top: 20px;
+		border-left: 5px solid #16651e;
+		background: #f5f5f5;
+		padding: 10px;
+		font-size: 20px;
+	}
+	table{
+		margin-top: 15px;
+	}
+	tr{
+		&:nth-child(odd){
+			background: #f5f5f5;
+		}
+	}
+
+.info{
+	h3{
+		&:before{
+			content: '';
+			// position: absolute;
+			width: 50px;
+			height: 50px;
+			border: 2px solid #fff;
+			top: 50%;
+			left: 50%;
+			border-radius: 100%;
+			transition: all .2s;
+		}
+	}
+	iframe{
+		width: 230px;
+		height:230px;
+	}
+}
+}
+
+.contentWrapper{
+	display: flex;
+	justify-content: space-between;
+	.campany_info{
+		width: 63%;
+		th{
+			padding: 12px 5px; 
+		}
+	}
+	.info{
+		width: 35%;
+		dd{
+			margin: 0;
+		}
+	}
+}
