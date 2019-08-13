@@ -1,0 +1,272 @@
+/* Write your code at the bottom */
+
+* {
+		box-sizing: border-box;
+	}
+	
+	html, body,
+	ul, ol, li,
+	h1, h2, h3, h4, h5, h6, p, div {
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		width:100%;
+	}
+	a{
+		text-decoration: none;
+	}
+	
+	body {
+		font-family: "Lucida Grande";
+	}
+	.clear-fix::after{
+		content:"";
+		display: block;
+		clear: both;
+	}
+	
+	.container{
+		padding: 0 15px;
+		@media all and(min-width:960px){
+			max-width: 960px;
+			margin: 0 auto;
+		}
+	}
+	.heading{
+		font-weight: bold;
+		text-align: center;
+		>h2{
+			font-size: 20px;
+		}
+		>h3{
+			font-size: 17px;
+			margin: 20px 0;
+		}
+	}
+	// header
+	.header{
+		background-color: rgba(34, 49, 52, 0.9);
+		height: 65px;
+		width: 100%;
+		position: fixed;
+    z-index: 100;
+    top: 0;
+		&_left{
+			width: 150px;
+			img{
+				margin-top: 20px;
+				float: left;
+			}
+		}
+		.fa-bars{
+			float: right;
+			margin-top: 20px;
+			color: #fff;
+			font-size: 25px;
+			@media all and(min-width:960px){
+				display: none;
+			}
+		}
+		.header_right{
+			display: none;
+			@media all and(min-width:960px){
+				display: block;
+				ul{
+					display: flex;
+					justify-content: flex-end;
+					list-style-type: none;
+					li{
+						line-height: 65px;
+						padding: 0 15px;
+						transition:  0.5s;
+						&:hover{
+							background-color:rgba(255,255,255,0.3);
+						}
+					}
+					a{
+						text-decoration: none;
+						color: #fff;
+					}
+				}
+
+			}
+		}
+	}
+
+	.top-wrapper{
+		clear: both;
+		background-image: url('https://prog-8.com/images/html/advanced/top_en.png');
+		padding: 180px 0 100px;
+		color: #fff;
+		background-size: cover;
+		@media all and(min-width:960px){
+			text-align: center;
+		}
+		h1{
+			font-size: 24px;
+			line-height: 1.5;
+			opacity: 0.7;
+			@media all and(min-width:960px){
+				font-size: 45px;
+				letter-spacing: 5px;
+			}
+		}
+		p{
+			font-size: 14px;
+			line-height: 1.5;
+			opacity: 0.7;
+		}
+		.sign-up_Wrapper{
+			text-align:center;
+
+			.btn{
+				width: 100%;
+				display: inline-block;
+				padding: 10px 24px;
+				border-radius: 5px;
+				opacity: 0.8;
+				color: #fff;
+				@media all and(min-width:960px) {
+					width: auto;
+				}
+				&.email{
+					background-color: #239b76;
+					margin-top: 15px;
+				}
+				&.facebook{
+					background-color: #3b5998;
+					@media all and(min-width:960px){
+						margin-right: 10px;
+					}
+				}
+				&.twitter{
+					background-color: #55acee;
+					margin-top: 10px;
+				}
+				.fab{
+					margin-right: 5px;
+				}
+			}
+			>p{
+				margin: 10px 0;
+			}
+		}
+	}
+.lesson{
+		padding: 80px 0 50px;
+		background-color: #f7f7f7;
+		@media all and(min-width:960px){
+			height: 500px;
+		}
+	
+	&_box{
+		ul{
+			margin-top: 50px;
+			@media all and(min-width:960px){
+				display: flex;
+				
+			}
+			li{
+				font-size: 14px;
+				padding: 0 20px;
+				list-style-type: none;
+				width: 100%;
+				@media all and(min-width:960px){
+					width: 25%;
+				}
+				.lesson_icon{
+					position: relative;
+					margin-top: 15px;
+				}
+				.lesson_kind{
+					position: absolute;
+					bottom: 50%;
+					right: 50%;
+					transform: translate(50%,50%);
+					color: #fff;
+				}
+				.lesson_text{
+					text-align: center;
+					margin-top: 15px;
+					@media all and(min-width:960px){
+						display:none;
+						
+					}
+				}
+			}
+		}
+	}
+}
+.faq{
+	background-color:#e6ecf0;
+	padding: 80px 0 100px;
+	.faq-list{
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 20px;
+		list-style-type: none;
+		@media all and(min-width:960px){
+			width: 60%;
+		}
+		&_item{
+			position: relative;
+			margin-top: 30px;
+			border-bottom: 1px solid #ddd;
+			span{
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding:20px 0;
+			}
+		}
+		&_quesiton{
+			padding:20px; 
+		}
+		&_answer{
+			margin-top: 20px;
+			padding: 30px 0;
+			display: none;
+		}
+	}
+	.active{
+		display: block;
+	}
+}
+.register{
+	padding: 50px 0 100px;
+	.btn_wrap{
+		margin-top: 20px;
+		text-align: center;
+		>a{
+			display: inline-block;
+			background-color: #5dca88;
+			padding: 15px 60px;
+			color: #fff;
+			border-radius: 5px;
+			box-shadow: #1a7940 0px 7px;
+			&:hover{
+				opacity: 0.8;
+			}
+			&:active{
+				position: relative;
+				top: 7px;
+				box-shadow:none;
+			}
+		}
+	}
+}
+.footer{
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
+	margin-bottom: 30px;
+	padding :20px 0;
+	&_logo{
+		width: 130px;
+	}
+	p{
+		font-size: 14px;
+		padding: 5px 0;
+		color:#b3aeb5;
+	}
+}
