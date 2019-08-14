@@ -1,4 +1,13 @@
 $(function () {
+    $('#register-email').on('click', function () {
+        $('.login-modal').fadeIn();
+    });
+    $('.fa-backspace').on('click', function () {
+        $('.login-modal').fadeOut(); 
+    });
+
+
+
     $('li').hover(function () { 
         $(this).find('.lesson_text').show();
     }, function () { 
@@ -6,7 +15,7 @@ $(function () {
         });
     
     
-    $('.faq-list_item').on('click', function () {
+    $('.faq-list').on('click', function () {
         var $answer = $(this).find('.faq-list_answer');
         if ($answer.hasClass('active')) {
             $answer.removeClass('active').slideUp();

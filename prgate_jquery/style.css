@@ -77,6 +77,47 @@ body {
             text-decoration: none;
             color: #fff; } }
 
+.login-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none; }
+  .login-modal_content {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: center; }
+  .login-modal .fa-backspace {
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+  .login-modal .signup-form input {
+    width: 320px;
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 12px;
+    border: solid 1px #d0d5d8;
+    border-radius: 5px; }
+  .login-modal .signup-form a {
+    background-color: #5dca88;
+    padding: 12px 130px;
+    margin-top: 20px; }
+  .login-modal .signup-form .btn_wrap {
+    margin-top: 20px; }
+    .login-modal .signup-form .btn_wrap a {
+      background-color: #5dca88;
+      padding: 12px 130px;
+      border-radius: 5px; }
+
 .top-wrapper {
   clear: both;
   background-image: url("https://prog-8.com/images/html/advanced/top_en.png");
