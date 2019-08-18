@@ -6,12 +6,18 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script>
 $(function(){
-	$('#second').text($('#first').text());
+	// $('#first').text($('#second').text());
+	// $('#second').html($('#first').html());
+	// $('#first').prepend('<strong>戦闘に挿入</strong>');
+	// $('#first').append('<strong>最後に挿入</strong>');
+	// $('#first').before('<p>前に文書を差し込み</p>');
+	// $('#first').after('<h6>後ろに文章を挿入</h6>');
+$('a').attr('href','http://google.com');
+$('a').text($('a').attr('href'));
 });
 		</script>
 	</head>
 	<body>
-		<p id="first">取得する文字列っっっｋ</p>
-		<p id="second">変更前だほ</p>
+		<a href='#'>リンク</a>
 	</body>
 </html>

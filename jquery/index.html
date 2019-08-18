@@ -8,6 +8,16 @@
   <title>jQuery</title>
 </head>
 <body>
-  
+  <option value='aaa'>aaa</option>
+  <option value='bbb'>bbb</option>
+  <option value='cccc'>cccc</option>
+  <option value='dddd'>ddd</option>
+  <script>
+      $('select').change(function(){
+        var value =$('option:selected').val();
+        console.log(value);
+      });
+
+  </script>
 </body>
 </html>

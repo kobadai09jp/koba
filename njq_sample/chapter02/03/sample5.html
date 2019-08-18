@@ -6,20 +6,24 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script>
 $(function(){
-	$('a:eq(0)').click(function(){
-		$('img').attr('src','flower.jpg').attr('alt','花');
-		return false;
-	});
-	$('a:eq(1)').click(function(){
-		$('img').attr('src','sea.jpg').attr('alt','海');
-		return false;
-	});
-	$('a:eq(2)').click(function(){
-		$('img').attr('src','jellyfish.jpg').attr('alt','クラゲ');
-		return false;
-	});
-	$('a:eq(3)').click(function(){
-		$('img').attr('src','building.jpg').attr('alt','建物');
+	// $('a:eq(0)').click(function(){
+	// 	$('p img').attr('src','flower.jpg');
+	// 	return false;
+	// });
+	// $('a:eq(1)').click(function(){
+	// 	$('p img').attr('src','sea.jpg');
+	// 	return false;
+	// });
+	// $('a:eq(2)').click(function(){
+	// 	$('p img').attr('src','jellyfish.jpg');
+	// 	return false;
+	// });
+	// $('a:eq(3)').click(function(){
+	// 	$('p img').attr('src','building.jpg');
+	// 	return false;
+	// });
+	$('a').click(function(){
+		$('p img').attr('src',$(this).attr('href'));
 		return false;
 	});
 });

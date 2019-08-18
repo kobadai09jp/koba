@@ -31,17 +31,33 @@ dd p{
 	text-indent:1em;
 	padding:20px;
 }
+dt.over{
+	background: url('images/background_selected.jpg');
+	cursor: pointer;
+}
+dt.selected{
+	background:url('images/background_selected.jpg');
+	cursor: default;
+	color: #000;
+}
 		</style>
 		<script>
 $(function(){
-	$("dd:not(:first-of-type)").css("display","none");
-	$("dl dt").click(function(){
-		if($("+dd",this).css("display")=="none"){
-			$("dd").slideUp("slow");
-			$("+dd",this).slideDown("slow");
+	$('dd:not(:first)').css('display','none');
+	$('dt:first').addClass('selected');
+	$('dl dt').click(function(){
+		if($('+dd',this).css('display')=='none'){
+			$('dd').slideUp('slow');
+			$('+dd',this).slideDown('slow');
+			$('dt.selected').removeClass('selected');
+			$(this).addClass('selected');
 		}
+	}).mouseover(function(){
+		$(this).addClass('over');
+	}).mouseout(function(){
+		$(this).removeClass('over');
 	});
-});
+});	
 		</script>
 	</head>
 	<body>
