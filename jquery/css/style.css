@@ -1,0 +1,11 @@
+#q35_box {
+    position:relative;
+    height:250px;
+}
+ 
+#q35 {
+    width:150px;
+    height:150px;
+    background:#F0F;
+    position:absolute;
+}

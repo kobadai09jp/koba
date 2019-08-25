@@ -8,16 +8,21 @@
   <title>jQuery</title>
 </head>
 <body>
-  <option value='aaa'>aaa</option>
-  <option value='bbb'>bbb</option>
-  <option value='cccc'>cccc</option>
-  <option value='dddd'>ddd</option>
-  <script>
-      $('select').change(function(){
-        var value =$('option:selected').val();
-        console.log(value);
-      });
+<div id="q35_box">
+  <div id="q35"></div>
+</div>
 
+  <script>
+  $(function(){
+    $('#q35').click(function(){
+      var aaa = $(this).offset().left;
+      var ccc = $(this).offset().top;
+      $('#q35').animate({
+        'left':aaa+500,
+        'top':ccc+200
+      });
+    })
+  })    
   </script>
 </body>
 </html>
