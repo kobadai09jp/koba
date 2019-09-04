@@ -1,0 +1,128 @@
+*,
+*:after,
+*:befre {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+.btn--animated {
+  animation: moveInButton 0.5s ease-in-out 1s;
+  animation-fill-mode: backwards; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase; }
+  .heading-primary_main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+  .heading-primary_sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400px;
+    letter-spacing: 15px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+
+.btn {
+  margin-top: 20px;
+  position: relative; }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 200px;
+    transition: all 0.2s; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    transition: all 0.4s; }
+  .btn:hover:after {
+    transform: scale(1.5);
+    opacity: 0; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+  border-radius: 200px; }
+  .btn--white:after {
+    background-color: #fff; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56f, rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+    .header__logo-box__logo {
+      height: 35px; }
+  .header__text-box {
+    position: absolute;
+    bottom: 60%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
