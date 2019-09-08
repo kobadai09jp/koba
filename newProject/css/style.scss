@@ -1,0 +1,412 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.cafe-up {
+  max-width: 950px;
+  margin: 100px auto 0;
+  box-sizing: border-box;
+  .header {
+    .breadCrumb {
+      > ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          box-sizing: border-box;
+          font-size: small;
+          padding: 10px 17px 10px 11px;
+          
+          &:nth-child(-n + 2) {
+            background-image: url(../img/arrow_breadcrumb.gif);
+            background-repeat: no-repeat;
+            background-position: right;
+          }
+          > a {
+            color: #000;
+            &:visited {
+              color: #8d6304;
+            }
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .main-header {
+      box-sizing: border-box;
+      ul {
+        box-sizing: border-box;
+        display: flex;
+        li {
+          box-sizing: border-box;
+          &:nth-child(n + 2):not(:nth-child(n + 7)) {
+            border-right: 1px dotted orange;
+          }
+          a{
+            box-sizing: border-box;
+          }
+          img{
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+
+  .main{
+    background-image:url(../img/bg01.png);
+    background-size: cover;
+    // background-size: cover;
+    &_box1{
+      position: relative;
+      >h1{
+        display: inline-block;
+        z-index: 100;
+      }
+      .mod-last{
+        position: absolute;
+        right: 10px;
+        top: 43px;
+      }
+    }
+    &_box2{
+      text-align: center;
+    }
+    &_box3{
+      text-align: center;
+      >p{
+        text-align: left;
+        font-size: 12px;
+        margin: 10px 0 0 50px;
+      }
+    }
+    &_box4{
+      text-align:center;
+      padding: 10px 0 50px;
+    }
+  }
+
+  .campagin{
+    border-top: 10px hotpink solid;
+    border-bottom: 10px hotpink solid;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    background-image: url(../img/bg02.png);
+    >h2{
+      >Img{
+        margin-top: -33px;
+        &:last-child{
+          margin-top: 30px;
+        }
+      }
+    }
+    >img{
+      margin-top: -70px;
+    
+      &:nth-of-type(2){
+        display: block;
+        margin: -80px 50px 0 auto;
+
+      }
+    }
+        a{
+          display:inline-block;
+          margin-top: -38px;
+        }
+  }
+  .condition{
+    background-image: url(../img/bg01.png);
+    padding-top: 30px;
+    &_contents{
+      width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      >h2{
+        background-color: pink;
+        text-align:center;
+        padding: 10px 0;
+      }
+      ul{
+        margin-top: 35px;
+        li{
+          // flex-wrap: wrap;
+          padding: 15px 0 20px 20px;
+          position: relative;
+          &:first-child h3{
+            margin-right:30px;
+          }
+          &:after{
+            content: '';
+            background-image: url(../img/liner01.png);
+            background-repeat: repeat-x;
+            display: block;
+            width: 95%;
+            height: 7px;
+            position: absolute;
+            bottom: 0;
+          }
+          >h3{
+            display: inline;
+          }
+          >p{
+            padding: 0 29px;
+            font-weight: bold;
+            line-height: 1.6;
+            white-space: pre-line;
+          }
+          >img{
+            display: block;
+            margin: 0 auto;
+          }
+          >dl{
+            font-size: 13px;
+            line-height: 1.5;
+            &:nth-child(n+2){
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+    }
+    .mod-flex{
+      display: flex;
+    }
+    .mod-smallText{
+      font-size: 12px;
+    }
+    .mod-red{
+      color: rgb(240, 48, 48);
+    }
+    .mod-inline{
+      display: inline-block;
+      padding-top: 15px;
+      vertical-align: top;
+    }
+    .mod-indent{
+      text-indent: -1em;
+      padding-left: 1em;
+    }
+    .cam-fb{
+      position: relative;
+      >img{
+        margin-top: 30px;
+        vertical-align: bottom;
+      }
+      >a{
+        position: absolute;
+        transform: translateX(50%);
+        right: 50%;
+        bottom: 22%;
+      }
+    }
+  }
+  .footer{
+    text-align: right;
+    margin-top: 10px;
+    >a{
+      font-size: 13px;
+      color: red;
+      position: relative;
+      &:before{
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: red;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-width: 0 4px 6px 4px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: 1px;
+        right: 102px;
+      }
+    }
+    &_sns{
+      ul{
+        display: flex;
+        justify-content: flex-end;
+        li{
+          &:first-child{
+            background-color: #1b95e0;
+            background-image: url(../img/Twitter_Logo_WhiteOnImage.svg);
+            background-repeat: no-repeat;
+            border-radius: 5px;
+          }
+          >a{
+            font-size: 12px;
+            padding: 5px 10px 4px 17px;
+            display: inline-block;
+            color: #fff;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+
+    &_info{
+      margin-top: 10px;
+      height: 80px;
+      background:#CB0006;
+      justify-content: space-between;
+      align-items:center; 
+      display: flex;
+      ul{
+        display: flex;
+
+        li{
+          background-image:url(../img/footer_arrow.gif);
+          background-repeat: no-repeat;
+          padding-left: 20px;
+          font-size: 13px;
+          margin-right: 20px;
+          a{
+            color: #fff;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

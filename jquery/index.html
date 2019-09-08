@@ -8,21 +8,19 @@
   <title>jQuery</title>
 </head>
 <body>
-<div id="q35_box">
-  <div id="q35"></div>
+  <div class="quiz_area">
+    <div class="quiz_set">
+        第<span class="quiz_no">0</span>問
+        <div class="quiz_question"></div>
+        <div class="quiz_ans_area">
+            <ul></ul>
+        </div>
+        <div class="quiz_area_bg"></div>
+        <div class="quiz_area_icon"></div>
+    </div>
+    <div class="quiz_result">
+      <img class="img" src='img/lp-tc-vrct-02-1909.jpg' alt='写真'>
+    </div>
 </div>
-
-  <script>
-  $(function(){
-    $('#q35').click(function(){
-      var aaa = $(this).offset().left;
-      var ccc = $(this).offset().top;
-      $('#q35').animate({
-        'left':aaa+500,
-        'top':ccc+200
-      });
-    })
-  })    
-  </script>
 </body>
 </html>
