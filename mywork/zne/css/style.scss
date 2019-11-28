@@ -1,0 +1,781 @@
+/*------------------
+  zne
+-------------------*/
+.zne {
+  background-color: #0a6bb1;
+
+  // 共通テキストボックス
+  .lp-textbox {
+    padding: 30px 9px 0;
+    @include mediaQuery() {
+      width: 44%;
+      padding: 0 0 0 12px;
+    }
+    @include mediaQuery(largeDesktop) {
+      width: 47%;
+      padding: 0 0 0 90px;
+    }
+    > h1,h2 {
+      @include font_family(primary);
+      font-size: 21px;
+      color: #efe450;
+      font-weight: bold;
+      line-height: 1.2;
+      @include mediaQuery() {
+        font-size: 47px;
+      }
+      &.mod-textTc {
+        font-size: 20px;
+        @include mediaQuery() {
+          font-size: 34px;
+          line-height: 1.2;
+        }
+      }
+    }
+    > p {
+      font-size: 16px;
+      color: #fff;
+      margin-top: 18px;
+      &:last-of-type {
+        margin-top: 15px;
+      }
+      @include mediaQuery() {
+        font-size: 19px;
+        letter-spacing: 0.2px;
+      }
+    }
+    > .buttonCTA_box {
+      &:first-of-type {
+        margin-top: 30px;
+      }
+      margin-top: 10px;
+      .buttonCTA {
+        width: 100%;
+        @include mediaQuery() {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .lp-line {
+    background-color: #efe450;
+    text-align:center;
+    &.mod-bottomLine {
+      margin-top: 65px;
+      @include mediaQuery(){
+        margin-top: 70px;
+      }
+    }
+    img {
+      max-width: 1600px;
+    }
+  }
+  // lp-mh start
+  .lp-mh {
+    // youtube自動再生
+    &_player {
+      position: relative;
+      padding-top: 56.3%;
+      overflow: hidden;
+      @include mediaQuery() {
+        pointer-events: none;
+      }
+      .lp-ytPlayer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  // lp-mh end
+
+  // lp-content start
+  .lp-content {
+    display: flex;
+    flex-direction: column;
+    @include mediaQuery() {
+      flex-direction: row;
+      max-width: 1500px;
+      margin: 85px auto 0;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include mediaQuery(largeDesktop) {
+      margin: 65px auto 0;
+      justify-content: space-between;
+    }
+
+    &_imageBox {
+      position: relative;
+      padding-top: 85%;
+      @include mediaQuery() {
+        background-color: #1977b8;
+        width: 66%;
+        max-width: 740px;
+        padding-top: 0;
+        margin-right: 65px;
+        height: 500px;
+        @include mediaQuery(largeDesktop) {
+          margin-left: 47px;
+          width: 60%;
+        }
+      }
+
+      &_item {
+        width: 80%;
+        margin: 0 auto;
+        &.lp-images {
+          position: absolute;
+        }
+        &.mod-1 {
+          top: 8%;
+          right: 19%;
+          width: 64%;
+          z-index: 1;
+          @include mediaQuery() {
+            width: 53%;
+            top: 3%;
+            right: 23%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 48%;
+            top: 3%;
+            right: 28%;
+          }
+          animation: showMe1 4s infinite;
+        }
+        &.mod-2 {
+          top: 14%;
+          right: 16%;
+          width: 54%;
+          z-index: 1;
+          @include mediaQuery() {
+            width: 53%;
+            top: 9%;
+            right: 15%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 48%;
+            top: 9%;
+            right: 19%;
+          }
+          animation: showMe2 4s infinite;
+        }
+        &.mod-3 {
+          top: 26%;
+          left: 2%;
+          width: 77.4%;
+          z-index: 2;
+          @include mediaQuery() {
+            width: 88%;
+            top: 13%;
+            left: 5%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 81%;
+            top: 10%;
+            left: 5%;
+          }
+          animation: showMe3 4s infinite;
+        }
+        &.mod-4 {
+          top: 18%;
+          right: 15%;
+          width: 77.4%;
+          z-index: 3;
+          @include mediaQuery() {
+            width: 88%;
+            top: 9%;
+            right: 7%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 81%;
+            top: 5%;
+            right: 14%;
+          }
+          animation: showMe4 4s infinite;
+        }
+        &.mod-5 {
+          top: 24%;
+          right: 5%;
+          width: 77.7%;
+          z-index: 4;
+          @include mediaQuery() {
+            top: 20%;
+            right: -3%;
+            width: 88%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 80%;
+            top: 12%;
+            right: 5%;
+          }
+          animation: showMe5 4s infinite;
+        }
+        &.mod-6 {
+          top: 27%;
+          left: 7%;
+          width: 77.7%;
+          z-index: 4;
+          @include mediaQuery() {
+            top: 9%;
+            left: 5%;
+            width: 88%;
+          }
+          @include mediaQuery(largeDesktop) {
+            width: 80%;
+            left: 5%;
+            top: 5%;
+          }
+          animation: showMe6 4s infinite;
+        }
+      }
+    }
+  }
+  // lp-content end
+
+  // 画像を切り替えるアニメーション　start
+  @keyframes showMe1 {
+    0% {
+      visibility: hidden;
+    }
+    19% {
+      visibility: hidden;
+    }
+    20% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes showMe2 {
+    0% {
+      visibility: hidden;
+    }
+    24% {
+      visibility: hidden;
+    }
+    25% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes showMe3 {
+    0% {
+      visibility: hidden;
+    }
+    44% {
+      visibility: hidden;
+    }
+    45% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes showMe4 {
+    0% {
+      visibility: hidden;
+    }
+    49% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes showMe5 {
+    0% {
+      visibility: hidden;
+    }
+    69% {
+      visibility: hidden;
+    }
+    70% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes showMe6 {
+    0% {
+      visibility: hidden;
+    }
+    74% {
+      visibility: hidden;
+    }
+    75% {
+      visibility: visible;
+    }
+    90% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  // 画像を切り替えるアニメーション　end
+
+  // lp-tc start
+  .lp-tc {
+    margin-top: 46px;
+    @include mediaQuery() {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      max-width: 1500px;
+      margin: 80px auto 0;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .mod-textbox_tc {
+      @include mediaQuery() {
+        width: 40%;
+        padding: 0 55px 0 0;
+        margin-top: 82px;
+        letter-spacing: 2px;
+      }
+
+      .buttonCTA {
+        @include mediaQuery() {
+          width: 300px;
+        }
+      }
+    }
+    &_imageBox {
+      margin-top: 35px;
+      padding: 0 10px;
+      @include mediaQuery() {
+        width: 53%;
+        max-width: 740px;
+        margin: 78px 0 0 15px;
+        padding: 0;
+      }
+
+      > div {
+        background-color: #1977b8;
+        @include mediaQuery() {
+          margin: 0 0 0 20px;
+          padding: 30px;
+        }
+      }
+    }
+    &_line {
+      width: 100%;
+      margin-top: 65px;
+      @include mediaQuery() {
+        margin-top: 80px;
+      }
+    }
+  }
+  // lp-tc end
+
+  // lp-slider_wrap start
+  .lp-slider_wrap {
+    background-color: #fff;
+    > h2 {
+      @include font_family(primary);
+      font-size: 22px;
+      text-align: center;
+      font-weight: 700;
+      color: #006ab3;
+      letter-spacing: 2px;
+      padding: 34px 0 0;
+      @include mediaQuery {
+        font-size: 35px;
+        padding: 58px 0 0;
+      }
+    }
+
+    .lp-slider {
+      text-align: center;
+      visibility: hidden;
+      position: relative;
+
+      .lp-sliderBtnWrap {
+        @include mediaQuery() {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+        }
+        .buttonCTA_box {
+          @include mediaQuery() {
+            width: 25%;
+          }
+          & > .buttonCTA {
+            margin-top: 0;
+          }
+        }
+      }
+
+      & > h3 {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1;
+        margin: 25px 0 0;
+        font-weight: 700;
+        @include mediaQuery {
+          font-size: 22px;
+          text-align: center;
+          line-height: 1.3;
+          margin-top: 40px;
+        }
+      }
+
+      & > p {
+        font-size: 15px;
+        line-height: 1.3;
+        margin-top: 15px;
+      }
+
+      & > .lp-gallerySlide {
+        margin: 23px 0 0;
+
+        & .lp-gallerySlide_item {
+          text-align: center;
+          outline: none !important;
+
+          & > div {
+            width: 84%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #efe450;
+            @include mediaQuery {
+              width: calc(100% - 100px);
+              margin: 30px auto 0;
+              padding: 50px;
+            }
+            &.mod-inner2 {
+              background-color: #88d9c9;
+            }
+            &.mod-inner3 {
+              background-color: #19a3a5;
+            }
+            &.mod-inner4 {
+              background-color: #0f6cb2;
+            }
+          }
+
+          & > p {
+            display: inline-block;
+            margin: 150px auto 0;
+            font-size: 15px;
+            width: 85%;
+            line-height: 1.4;
+            height: 48px;
+            @include mediaQuery(mobile) {
+              margin-top: 90px;
+            }
+            > span {
+              font-weight: bold;
+            }
+          }
+        }
+
+        & .slick-arrow {
+          position: absolute;
+          z-index: 10;
+          bottom: 50%;
+          transform: translateY(50%);
+          width: 50px;
+          height: 50px;
+          @include mediaQuery() {
+            left: 14%;
+            bottom: 47%;
+            overflow: hidden;
+            z-index: 1;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            right: 24%;
+            top: 20%;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-top: solid 2px #000;
+            border-right: solid 2px #000;
+            transform: rotate(45deg);
+            animation: toRight 2s infinite ease 10ms;
+          }
+
+          &:first-child {
+            &:after {
+              content: "";
+              position: absolute;
+              left: 25%;
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              border-top: solid 2px #000;
+              border-right: solid 2px #000;
+              transform: scale(-1, 1);
+              transform: rotate(-135deg);
+              animation: toLeft 2s infinite ease 10ms;
+            }
+          }
+
+          &:last-child {
+            right: 0%;
+            @include mediaQuery() {
+              right: 14%;
+              left: auto;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.slick-disabled {
+            opacity: 0 !important;
+          }
+        }
+      }
+
+      & > .lp-navigationSlide {
+        top: -25px;
+        text-align: center;
+        z-index: 11;
+        cursor: pointer;
+        @include mediaQuery() {
+          top: -55px;
+        }
+
+        & .lp-navigationSlide_item {
+          @include font_family(primary);
+          display: inline-block;
+          margin: 47px 65px 0;
+          font-size: 16px;
+          -webkit-transition: all 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+          transition: all 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+          width: 1%;
+          outline: none !important;
+          @include mediaQuery {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 96px 0 0;
+            width: 360px;
+          }
+
+          > h3 {
+            @include font_family();
+            font-size: 18px;
+            font-weight: normal;
+            text-transform: none;
+            @include mediaQuery() {
+              font-size: 20px;
+            }
+          }
+          &:hover {
+            transition: all 0.1s;
+            &:after {
+              opacity: 0.3;
+              width: 200px;
+              transition: all 0.1s;
+              @include mediaQuery() {
+                width: 70%;
+              }
+            }
+          }
+
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 2px;
+            background-color: #000;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all 0.3s;
+            @include mediaQuery() {
+              width: 0%;
+            }
+          }
+
+          &.slick-current {
+            opacity: 1 !important;
+            color: #006ab3;
+
+            > h3 {
+              font-weight: bold;
+            }
+
+            &:after {
+              content: "";
+              display: inline-block;
+              width: 210px;
+              height: 2px;
+              background-color: #006ab3 !important;
+              margin-top: 10px;
+              opacity: 1 !important;
+              @include mediaQuery() {
+                width: 70%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // lp-slider_wrap end
+  // 下からフェードインアニメーション呼び出し
+  .js-bottomToTop {
+    animation-duration: 1s;
+    animation-name: buttomToTop;
+    visibility: visible !important;
+  }
+
+  // 下からフェードインするアニメーション
+  @keyframes buttomToTop {
+    0% {
+      opacity: 0;
+      transform: translateY(500px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // スライダーのarrowアニメーション
+  @keyframes toLeft {
+    0% {
+      opacity: 1;
+      left: 23%;
+    }
+    20% {
+      opacity: 1;
+      left: 23%;
+    }
+    50% {
+      opacity: 0;
+      left: -33%;
+    }
+
+    70% {
+      opacity: 0;
+      left: 75%;
+    }
+    100% {
+      opacity: 1;
+      left: 23%;
+    }
+  }
+  @keyframes toRight {
+    0% {
+      opacity: 1;
+      right: 23%;
+    }
+
+    20% {
+      opacity: 1;
+      right: 23%;
+    }
+
+    50% {
+      opacity: 0;
+      right: -33%;
+    }
+    51% {
+      opacity: 0;
+      right: -33%;
+    }
+    70% {
+      opacity: 0;
+      right: 75%;
+    }
+
+    100% {
+      opacity: 1;
+      right: 23%;
+    }
+  }
+  // lp-genderLink start
+  .lp-genderLink {
+    @include mediaQuery() {
+      margin-top: 30px;
+    }
+    > ul {
+      padding: 30px 0;
+      @include mediaQuery() {
+        display: flex;
+        max-width: 1366px;
+        margin: 0 auto;
+        padding: 30px 0 60px;
+      }
+
+      > li {
+        position: relative;
+        margin: 0 20px;
+        @include mediaQuery() {
+          width: calc(100% / 3 - 30px);
+          a {
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-color: transparent;
+              transition: background-color 0.5s ease-in-out;
+            }
+
+            &:hover:after {
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        @include mediaQuery(mobile) {
+          &:nth-child(n + 2) {
+            margin-top: 15px;
+          }
+        }
+        .button-position {
+          position: absolute;
+          display: block;
+          bottom: 7%;
+          right: 0;
+          left: 0;
+          text-align: center;
+          @include mediaQuery() {
+            bottom: 4%;
+          }
+        }
+      }
+    }
+  }
+  // lp-genderLink end
+}
+
+/*------------------
+  END zne
+-------------------*/
