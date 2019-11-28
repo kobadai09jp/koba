@@ -96,3 +96,8 @@
 .quiz_area .quiz_ans_area ul li.selected{
     background-color: #bcbcbc;
 }
+.quiz_result img{
+    width: 500px;
+    margin:  0 auto;
+}
+

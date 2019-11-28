@@ -1,0 +1,236 @@
+/*------------------
+    eqtgazelle
+-------------------*/
+
+.eqtgazelle{
+
+  .lp-ContentsWrapper{
+    background-color:#717171;
+  }
+  .lp-container{
+    @include mediaQuery(){
+      max-width: 1365px;
+      margin:0 auto;
+    }
+  }
+
+  .lp-containerWide{
+    padding: 0 4%;
+    color: #fff;
+    @include mediaQuery(){
+      padding: 0 19%;
+    }
+  }
+  .buttonCTA_box{
+    text-align:center;
+    margin: 17px auto 0;
+    border:solid #fff 2px;
+    width: 140px;
+    @include mediaQuery(){
+      margin: 35px auto 0;
+      width: 190px;
+      border: solid #fff 2px
+    }
+    &:hover{
+      opacity:0.7;
+    }
+    .buttonCTA{
+      background-color: transparent;
+      font-size: 15px;
+      min-height: 36px;
+      @include mediaQuery(){
+        font-size: 22px;
+      }
+    }
+  }
+  // <!-- *---------------------lp-gridBoxここから---------------------* -->
+  .lp-gridBox{
+    .lp-textContainer{
+    h2{
+      margin-top:35px;
+      line-height: 1.4;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      @include font_family(primary);
+      @include mediaQuery(){
+        margin-top: 65px;
+        font-size: 33px;
+        font-weight: bold;
+        @media (min-width:960px)and(max-width:1080px){
+        font-size:29px;
+        }
+      }
+    }
+    p{
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align:center;
+      text-align: justify;
+      @include mediaQuery(){
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      &:first-of-type{
+      margin-top: 14px;
+      }
+      }
+    }
+    .lp-itemImgBox{
+      margin-top: 15px;
+      @include mediaQuery(){
+      margin-top: 65px;
+      }
+      display: flex;
+      justify-content: space-between;
+      .lp-itemImg{
+        width: 100%;
+        &.mod-margin{
+          margin-right:5px;
+          @include mediaQuery(){
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  // <!-- *---------------------lp-gridBoxここまで---------------------* -->
+
+    // <!-- *---------------------lp-stylesWrapここから---------------------* -->
+  .lp-styleWrapper{
+    color: #fff;
+    @include mediaQuery(){
+      // padding: 0 6%;
+    }
+    .lp-textstylesWrap{
+      margin-top: 35px;
+      padding: 0 4%;
+      @include mediaQuery(){
+        margin-top: 70px;
+        padding: 0 19%;
+      }
+      .lp-statementImg{
+        width:205px;
+        margin: 0 auto;
+        @include mediaQuery(){
+          width: 415px;
+        }
+      }
+    .lp-styleText{
+      p{
+      margin-top:17px;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: justify;
+      @include mediaQuery(){
+      margin-top: 29px;
+      font-size: 17px;
+      line-height: 1.7;
+      }
+      }
+    }
+  }
+    .lp-imageFlex{
+      margin-top: 17px;
+      @include mediaQuery(){
+        margin-top: 28px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 6%;
+      }
+      .lp-imageBox{
+        &:last-child{
+        margin-top: 10px;
+          @include mediaQuery(){
+            margin: 0;
+          }
+        }
+        @include mediaQuery(){
+        width:50%;
+          &.mod-margin{
+          margin-right:10px;
+          }
+        }
+      }
+    }
+  }
+  // <!-- *---------------------lp-stylesWrapここまで---------------------* -->
+  // <!-- *---------------------lp-featureWrapここから---------------------* -->
+  .lp-featureWrap{
+    padding-bottom:30px; 
+    @include mediaQuery(){
+      padding-bottom: 70px;
+    }
+    .lp-textstylesWrap{
+      margin-top: 35px;
+    @include mediaQuery(){
+      margin-top: 70px;
+    }
+    .lp-statementImg{
+      width:205px;
+      margin: 0 auto;
+      @include mediaQuery(){
+        width: 503px;
+      }
+    }
+    .lp-styleText{
+      h2{
+        margin-top:20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.4;
+        @include font_family(primary);
+        @include mediaQuery(){
+          margin-top: 35px;
+          font-size: 33px;
+          @media (min-width:960px)and(max-width:1080px){
+            font-size:29px;
+          }
+          font-weight: bold;
+        }
+      }
+      p{
+        margin-top:17px;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align:center;
+        text-align: justify;
+        @include mediaQuery(){
+          margin-top: 29px;
+          font-size: 17px;
+          line-height: 1.7;
+        }
+      }
+    }
+    }
+      .lp-bottomPic{
+        width: 60%;
+        margin: 15px auto 0;
+      @include mediaQuery(){
+        width: 36%;
+        margin: 30px auto 0;
+      }
+      p{
+        font-size: 16px;
+        text-align:center;
+        margin-top: 15px;
+        color: #fff;
+        letter-spacing: 2px;
+        .mod-bold{
+          font-weight: bold;
+        }
+        @include mediaQuery(){
+          font-size: 20px;
+        }
+        .lp-buttomText{
+          font-family:'adihausDIN-regular-cond';
+
+        }
+      }
+    }
+  }
+  // <!-- *---------------------lp-featureWrapここまで---------------------* -->
+}
+

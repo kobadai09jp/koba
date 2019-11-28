@@ -1,0 +1,927 @@
+.homeofclassics {
+  background-color: #fff;
+  // 読込中に要素を非表示
+  .lp-wrap_All {
+    visibility: hidden;
+  }
+
+  .lp-container {
+    margin: 0 2.5px;
+    @include mediaQuery(){
+      margin: 0 5px;
+    }
+  }
+
+  // ローディング画面gb
+  .lp-loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    z-index: 10;
+    // ローディングアイコン
+    .lp-loader {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin-top: -100px;
+      margin-left: -100px;
+      text-align: center;
+      z-index: 11;
+    }
+  }
+
+  .lp-mh {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5px;
+    @include mediaQuery() {
+      margin: 5px 0;
+    }
+
+    &_line {
+      position: absolute;
+      top: -0.6%;
+      right: 5.5%;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      display: none;
+      @include mediaQuery() {
+        top: 1.6%;
+        right: 0%;
+      }
+    }
+
+    &_logo {
+      position: absolute;
+      right: 3%;
+      top: 2%;
+      width:34px;
+      z-index: 1;
+    }
+
+    .lp-popup {
+      position: absolute;
+      top: 13%;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translate(0, 80px);
+      transition: 1s;
+      z-index: 10;
+      @include mediaQuery() {
+        top: 67%;
+      }
+      &_inner {
+        @include mediaQuery() {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      &.add-scrollin {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+    @include mediaQuery() {
+      display: flex;
+    }
+  }
+
+  .lp-slideshow,
+  .lp-slideshow_sub,
+  .lp-slideshow_statement {
+    overflow: hidden;
+    position: relative;
+    padding-top: 81.6%;
+    z-index: 1;
+    @include mediaQuery() {
+      padding-top: 48.35%;
+      width: 66.19%;
+    }
+    .slideshow-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .lp-slideWrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .lp-slide {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      // opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &.add-active {
+        display: block;
+      }
+
+      &.add-firstslide {
+        display: block;
+      }
+
+      .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        z-index: 1;
+        background-size: cover;
+
+        img {
+          height: 100%;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .slide-content {
+        transition: all 2s ease-in-out;
+      }
+
+      .text {
+        margin: 0 auto;
+        max-width: 1000px;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      .btn {
+        margin: 15px 0 0;
+        border-color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+    }
+  }
+  // 1つ目のスライドショー個別スタイル
+  .lp-slideshow {
+    @include mediaQuery(){
+      margin-right: 5px;
+    }
+  }
+
+  // 2つ目のスライドショー個別スタイル
+  .lp-slideshow_sub {
+    overflow: hidden;
+    position: relative;
+    padding-top: 70.6%;
+    margin-top: 2.5px;
+    @include mediaQuery() {
+      padding-top: 0;
+      margin-top: 0;
+      width: 33.81%;
+    }
+  }
+
+  // ２つ目スタイル終わり
+
+  // 3つ目のスライドショー個別スタイル
+  .lp-slideshow_statement {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 116%;
+    margin-top: 2.5px;
+    @include mediaQuery() {
+      padding-top: 36%;
+      margin-top: 0;
+    }
+    // statementのスタイル
+    &_textBox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 13%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      z-index: 1;
+      color: #fff;
+      @include mediaQuery() {
+        bottom: 8%;
+      }
+      > figure {
+        position: absolute;
+        &:nth-child(1) {
+          top: 32%;
+          width: 47%;
+          right: 50%;
+          transform: translateX(50%);
+          @include mediaQuery() {
+            width: 17%;
+            top: 32.1%;
+          }
+        }
+        &:nth-child(2) {
+          top: 42.1%;
+          right: 50%;
+          transform: translateX(50%);
+          width: 87%;
+          @include mediaQuery() {
+            top: 44.1%;
+            right: 50%;
+            width: 23%;
+          }
+        }
+      }
+    }
+    &_line {
+      top: 64.5%;
+      left: 0;
+      right: 0;
+      position: absolute;
+      z-index: 1;
+      @include mediaQuery() {
+        top: 66.5%;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+  // 3つ目スタイル終わり
+
+  // lp-slider ここから
+  .lp-slider {
+    margin: 65px 0 90px;
+    text-align: center;
+    @include mediaQuery {
+      margin-top: 80px;
+      margin: 80px 0 120px;
+    }
+    .lp-sliderBtnWrap {
+      @include mediaQuery() {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .buttonCTA_box {
+        @include mediaQuery() {
+          width: 25%;
+        }
+        & > .buttonCTA {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .slick-list {
+      padding: 0% 22% 0 0;
+      @include mediaQuery() {
+        padding: 0 calc(6.25% + 60px) 0 6.25%;
+      }
+      .slick-track {
+        @include mediaQuery() {
+          padding-left: 60px;
+        }
+      }
+    }
+
+    & > h2 {
+      font-size: 16px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.4;
+      @include mediaQuery {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+    }
+    & > h3 {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1;
+      margin: 25px 0 0;
+      font-weight: 700;
+      @include mediaQuery {
+        font-size: 22px;
+        text-align: center;
+        line-height: 1.3;
+        margin-top: 40px;
+      }
+    }
+
+    & > p {
+      font-size: 15px;
+      line-height: 1.3;
+      margin-top: 15px;
+    }
+
+    & > .lp-gallerySlide {
+      margin: 20px 0 0;
+
+      & .lp-gallerySlide_item {
+        text-align: center;
+        outline: none !important;
+        @include mediaQuery(mobile) {
+          padding-left: 30px;
+        }
+        @include mediaQuery() {
+          padding-right: 2%;
+        }
+
+        & > div {
+          text-align: left;
+          margin: 5px 0;
+        }
+
+        & > .mod-slideShoes {
+          display: inline-block;
+          margin: 25px auto 0;
+          font-weight: bold;
+          @include mediaQuery() {
+            margin: 80px auto 0;
+          }
+          font-size: 14px;
+          width: 85%;
+          line-height: 1.4;
+          height: 38px;
+        }
+        & > p {
+          display: inline-block;
+          margin: 80px auto 0;
+          font-size: 14px;
+          width: 85%;
+          line-height: 1.4;
+          height: 38px;
+        }
+
+        .lp-itemInner {
+          position: relative;
+
+          &_text {
+            margin-top: 25px;
+            text-align: left;
+            height: 245px;
+            @include mediaQuery() {
+              height: 208px;
+            }
+            @include mediaQuery(largeDesktop) {
+              margin-top: 28px;
+              height: 175px;
+            }
+            > h3 {
+              line-height: 1.7;
+              font-weight: bold;
+              font-size: 15px;
+              @include mediaQuery() {
+                font-size: 17px;
+                letter-spacing: 1.2px;
+              }
+            }
+            > p {
+              font-size: 12px;
+              line-height: 1.9;
+              margin-top: 5px;
+              @include mediaQuery() {
+                margin-top: 17px;
+                font-size: 13px;
+              }
+              > span {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .lp-imagePosition {
+            position: absolute;
+            bottom: 10px;
+            width: 50%;
+            width: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, 0);
+            img {
+              width: 50%;
+              position: absolute;
+              bottom: -50px;
+              left: 50%;
+              z-index: 3;
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .slick-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 30%;
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border-top: solid 3px #000;
+          border-right: solid 3px #000;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(1) {
+          @include mediaQuery() {
+            top: 27%;
+            left: 10%;
+          }
+          @include mediaQuery(largeDesktop) {
+            top: 32%;
+            left: 8%;
+          }
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-top: solid 3px #000;
+            border-right: solid 3px #000;
+            transform: scale(-1, 1);
+            transform: rotate(-135deg);
+          }
+        }
+
+        &:nth-child(3) {
+          @include mediaQuery() {
+            right: 7.4%;
+            top: 27%;
+          }
+          @include mediaQuery(largeDesktop) {
+            top: 32%;
+            right: 7.6%;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.slick-disabled {
+          display: none !important;
+        }
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -21px;
+
+      & > li {
+        display: inline-block;
+        @include mediaQuery() {
+          display: none;
+        }
+        outline: none;
+
+        & > button {
+          font-size: 0;
+          border: none;
+          padding: 5px 3px 0;
+          vertical-align: bottom;
+          cursor: pointer;
+          background: transparent;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 18px;
+            border-top: 1px solid #000;
+            -webkit-transition: border-top 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+            transition: border-top 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+          }
+        }
+
+        &:hover {
+          & > button {
+            &:after {
+              border-top: 4px solid #000;
+            }
+          }
+        }
+
+        &.slick-active {
+          & > button {
+            &:after {
+              border-top: 4px solid #000;
+            }
+          }
+        }
+      }
+    }
+
+    & > .lp-navigationSlide {
+      top: -160px;
+      text-align: center;
+
+      & .lp-navigationSlide_item {
+        @include font_family(primary);
+        display: inline-block;
+        margin: 0 65px;
+        font-size: 16px;
+        -webkit-transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+        transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+        opacity: 0.3;
+        outline: none !important;
+        @include mediaQuery {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        &.slick-current {
+          opacity: 1;
+
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 80%;
+            height: 3px;
+            background-color: #000;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  // lp-slider ここまで
+  // 動画ポップアップ部分のスタイル
+  .lp-movie {
+    position: relative;
+    margin-top: 20px;
+    @include mediaQuery() {
+      margin-top: 30px;
+    }
+
+    > a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      & .lp-playBtn {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          border: 2px solid #fff;
+          top: 50%;
+          left: 50%;
+          margin-top: -40px;
+          margin-left: -40px;
+          border-radius: 100%;
+          transition: all 0.2s;
+          background-color: rgba(0, 0, 0, 0.4);
+          @include mediaQuery() {
+            margin-top: -45px;
+            margin-left: -45px;
+            width: 90px;
+            height: 90px;
+          }
+        }
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 26px solid #fff;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-top: -14px;
+          margin-left: -8px;
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+  // 動画ポップアップ部分のスタイルここまで
+  // lp-collection ここから
+  .lp-collection {
+    position: relative;
+    margin-bottom: 2.5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/lp/originals/homeofclassics/images/mobile/lp-bg_1910-min.jpg");
+    @include mediaQuery() {
+      background-image: url("/lp/originals/homeofclassics/images/lp-bg_1910-min.jpg");
+      margin-bottom: 5px;
+    }
+    &_text {
+      position: absolute;
+      top: 8%;
+      left: 7%;
+      color: #fff;
+      @include mediaQuery() {
+        top: 6.1%;
+        left: 57.6%;
+        width: 37%;
+      }
+      @include mediaQuery(largeDesktop) {
+        top: 8.9%;
+        left: 61.6%;
+        width: 32%;
+      }
+      > p {
+        font-size: 12px;
+        line-height: 1.8;
+        @include mediaQuery() {
+          font-size: 13px;
+        }
+        @include mediaQuery(largeDesktop) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &_contents {
+      padding-top: 96%;
+      width: 100%;
+      padding-bottom: 10%;
+      @include mediaQuery() {
+        padding-top: 28%;
+      }
+
+      &_items {
+        margin: 0 20px;
+        @include mediaQuery() {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 770px;
+          margin: 0 auto;
+          justify-content: space-between;
+        }
+        @include mediaQuery(largeDesktop) {
+          max-width: 1285px;
+        }
+
+        &_image {
+          @include mediaQuery(mobile) {
+            &:not(:first-child) {
+              margin-top: 30px;
+            }
+          }
+
+          &_wrap {
+            opacity: 0;
+            height: 100%;
+            &_bg {
+              position: relative;
+              height: 100%;
+              width: 0;
+              transition: all 0.9s;
+              padding-top: 140%;
+              @include mediaQuery() {
+                padding-top: 127%;
+              }
+              &.mod-item1 {
+                &:before {
+                  background: url("/lp/originals/homeofclassics/images/mobile/lp-collection-01_1910-min.jpg")
+                    no-repeat;
+                  background-size: cover;
+                  @include mediaQuery() {
+                    background: url("/lp/originals/homeofclassics/images/lp-collection-01_1910-min.jpg")
+                      no-repeat;
+                    background-size: cover;
+                  }
+                }
+              }
+              &.mod-item2 {
+                &:before {
+                  background: url("/lp/originals/homeofclassics/images/mobile/lp-collection-02_1910-min.jpg")
+                    no-repeat;
+                  background-size: cover;
+                  @include mediaQuery() {
+                    background: url("/lp/originals/homeofclassics/images/lp-collection-02_1910-min.jpg")
+                      no-repeat;
+                    background-size: cover;
+                  }
+                }
+              }
+              &.mod-item3 {
+                &:before {
+                  background: url("/lp/originals/homeofclassics/images/mobile/lp-collection-03_1910-min.jpg")
+                    no-repeat;
+                  background-size: cover;
+                  @include mediaQuery() {
+                    background: url("/lp/originals/homeofclassics/images/lp-collection-03_1910-min.jpg")
+                      no-repeat;
+                    background-size: cover;
+                  }
+                }
+              }
+              &.mod-item4 {
+                &:before {
+                  background: url("/lp/originals/homeofclassics/images/mobile/lp-collection-04_1910-min.jpg")
+                    no-repeat;
+                  background-size: cover;
+                  @include mediaQuery() {
+                    background: url("/lp/originals/homeofclassics/images/lp-collection-04_1910-min.jpg")
+                      no-repeat;
+                    background-size: cover;
+                  }
+                }
+              }
+              &:before {
+                height: 100%;
+                width: 100%;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+
+        .add-animation {
+          animation: img-opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+          overflow: hidden;
+          position: relative;
+          animation-fill-mode: forwards;
+        }
+        .add-animation_width {
+          animation: img-width 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+          overflow: hidden;
+          position: relative;
+          animation-fill-mode: forwards;
+        }
+
+        // imgのopacityを0から１へアニメーション
+        @keyframes img-opacity {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        // imgのwidthを0から１00%へアニメーション
+        @keyframes img-width {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+        &_image {
+          position: relative;
+          @include mediaQuery() {
+            width: 47%;
+            &:nth-child(n + 3) {
+              margin-top: 80px;
+            }
+          }
+        }
+
+        .lp-popup {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 7%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          opacity: 0;
+          transform: translate(0, 80px);
+          transition: 1s;
+          @include mediaQuery() {
+            width: 80%;
+            margin: 0 auto;
+            bottom: 0%;
+          }
+          @include mediaQuery(largeDesktop) {
+            bottom: -5%;
+          }
+          // jsで以下のクラスを付与
+          &.add-scrollin {
+            opacity: 1;
+            transform: translate(0, 0);
+            &.mod-scrollin {
+              @include mediaQuery(mobile) {
+                transform: translate(0, 15px);
+              }
+            }
+          }
+        }
+        .lp-textBox {
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          bottom: 8%;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          transform: translate(0, 80px);
+          transition: 1s;
+          @include mediaQuery() {
+            bottom: 6%;
+          }
+          @include mediaQuery(largeDesktop) {
+            bottom: 13%;
+          }
+          > h2 {
+            @include font_family(primary);
+            font-size: 22px;
+            font-weight: bold;
+            @include mediaQuery() {
+              font-size: 28px;
+            }
+            @include mediaQuery(largeDesktop) {
+              font-size: 34px;
+              letter-spacing: 1.5px;
+            }
+          }
+          > p {
+            margin-top: 8px;
+            line-height: 1.7;
+            font-size: 12px;
+            @include mediaQuery(mobile) {
+              white-space: nowrap;
+            }
+            @include mediaQuery() {
+              margin-top: 4px;
+              font-size: 14px;
+            }
+            @include mediaQuery(largeDesktop) {
+              margin-top: 23px;
+              font-size: 14px;
+            }
+          }
+          &.add-scrollin {
+            opacity: 1;
+            transform: translate(0, 0);
+            &.add-scrollin_bottom {
+              @include mediaQuery() {
+                bottom: 11%;
+              }
+              @include mediaQuery(largeDesktop) {
+                bottom: 16%;
+              }
+            }
+          }
+
+          .buttonCTA_box {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

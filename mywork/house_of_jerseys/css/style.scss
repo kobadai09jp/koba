@@ -1,0 +1,532 @@
+/*------------------
+house_of_jerseys
+-------------------*/
+.house_of_jerseys {
+
+  // ローカルナビ
+  .lpc-ukLocalNavigation {
+    margin-top: 30px;
+    @include mediaQuery() {
+      margin-top:10px ;
+    }
+    h2 {
+      font-size: 25px;
+      margin: 11px 0 20px;
+      @include mediaQuery() {
+        font-size: 31px;
+      }
+    }
+    &_item{
+      margin-top: 22px;
+      @include mediaQuery() {
+        margin-top: 0;
+      }
+    }
+
+    &_itemList{
+      @include mediaQuery(){
+        justify-content: center;
+      }
+    }
+  }
+  
+  .mod-letterSpacing{
+    @include mediaQuery(){ 
+      letter-spacing: 1.5px;
+    }
+  }
+
+  // lp-releases
+  .lp-releases {
+    margin-top: 53px;
+    text-align: center;
+    > h1 {
+      @include font_family(primary);
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1.7px;
+      @include mediaQuery() {
+        font-size: 30px;
+      }
+    }
+
+    &_contents {
+      margin-top: 10px;
+      @include mediaQuery(desktopFollow) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px 12px 0;
+      }
+
+      &_item {
+        display: block;
+        height: 504px;
+        @include mediaQuery(mobileOnly) {
+          padding: 12px 24px;
+        }
+        @include mediaQuery(){
+          height:480px;
+          &:nth-child(n+5){
+            margin-top: 24px;
+          }
+        }
+
+        figure {
+          display: inline;
+        }
+        
+        img {
+          height: 100%;
+          object-fit: cover;
+          font-family: "object-fit: cover;";
+        }
+        @include mediaQuery(tablet) {
+          width: calc(100% / 2 - 24px);
+          margin-bottom: 25px;
+        }
+        @include mediaQuery() {
+          width: calc(100% / 4 - 24px);
+        }
+        p {
+          position: relative;
+          bottom: 12%;
+          color: #fff;
+          font-size: 13px;
+          display: inline-block;
+          padding: 5px;
+          text-decoration: underline;
+          letter-spacing: 1.4px;
+          font-weight: bold;
+          line-height: 1.4;
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+
+        .mod-manchester{
+          @include mediaQuery(mobileOnly){
+            bottom:11%;
+          }
+        }
+      }
+    }
+  }
+
+  // lp-street
+  .lp-street {
+    margin-top: 70px;
+    @include mediaQuery(desktopFollow) {
+      max-width: 1000px;
+      margin: 80px auto 0;
+    }
+
+    &_heading {
+      margin-left: 24px;
+      @include mediaQuery() {
+        margin-left: 40px;
+      }
+      > h2 {
+        @include font_family(primary);
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        text-align: left;
+        @include mediaQuery(desktopFollow) {
+          font-size: 29px;
+        }
+      }
+      > p {
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+    ul {
+      margin-top: 30px;
+      @include mediaQuery() {
+        margin-top: 35px;
+      }
+      li {
+        padding-right: 20px;
+        @include mediaQuery(desktopFollow) {
+          width: 80%;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+    }
+    &_text {
+      margin-top: 17px;
+      > h3 {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.3;
+        @include mediaQuery() {
+          font-size: 15px;
+        }
+      }
+      > p {
+        font-size: 14px;
+        margin-top: 5px;
+        line-height: 1.6;
+      }
+    }
+
+    .owl-stage-outer{
+      @include mediaQuery(mobileOnly){
+        margin-left: -29px;
+      }
+    }
+  }
+
+  /* ========================
+		slider  フットボールページから流用
+	======================== */
+  .lp-slider {
+    margin-top: 80px;
+    text-align: center;
+    @include mediaQuery {
+      margin-top: 120px;
+    }
+    > h2 {
+      font-size: 25px;
+      font-weight: bold;
+      @include font_family(primary);
+      letter-spacing: 1.5;
+      @include mediaQuery() {
+        font-size: 29px;
+      }
+    }
+    > p {
+      font-size: 15px;
+      margin-top: 20px;
+      @include mediaQuery() {
+        font-size: 16px;
+      }
+    }
+
+    & > .lp-gallerySlide {
+
+      & .lp-gallerySlide_item {
+        text-align: center;
+        outline: none !important;
+
+        & > div {
+          width: calc(100% - 15px);
+          margin: 0 auto;
+          @include mediaQuery {
+            width: calc(100% - 15%);
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      & .slick-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 30%;
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          border-top: solid 3px #000;
+          border-right: solid 3px #000;
+          transform: rotate(45deg);
+        }
+
+        &:first-child {
+          left: 15%;
+          top: 50%;
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-top: solid 3px #000;
+            border-right: solid 3px #000;
+            transform: scale(-1, 1);
+            transform: rotate(-135deg);
+          }
+        }
+
+        &:last-child {
+          right: 15%;
+          top: 50%;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.slick-disabled {
+          display: none !important;
+        }
+      }
+    }
+
+    & > .lp-navigationSlide {
+      text-align: center;
+      margin-top: 30px;
+
+      & .lp-navigationSlide_item {
+        @include font_family(primary);
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 65px;
+        font-size: 16px;
+        -webkit-transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+        transition: all 0.2s cubic-bezier(0.3, 0, 0.45, 1);
+        opacity: 0;
+        outline: none !important;
+        @include mediaQuery {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        &.slick-current {
+          opacity: 1;
+        }
+      }
+
+      & .slick-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -145px;
+
+        & > li {
+          display: inline-block;
+          outline: none;
+
+          & > button {
+            font-size: 0;
+            border: none;
+            padding: 5px 3px 0;
+            vertical-align: bottom;
+            cursor: pointer;
+            background: transparent;
+          }
+
+          &.slick-active {
+            & > button {
+              &:after {
+                border-top: 4px solid #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+      /* ========================
+		lp-movie   フットボールページから流用
+	======================== */
+
+    .lp-movie {
+      position: relative;
+      margin-top: 20px;
+      @include mediaQuery() {
+        margin-top: 30px;
+      }
+
+      > a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        & .lp-playBtn {
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+
+          & > svg > path:first-child {
+            fill: #000;
+          }
+
+          & > svg > path:last-child {
+            fill: #fff;
+            -webkit-transition: fill 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+            transition: fill 0.1s cubic-bezier(0.3, 0, 0.45, 1);
+          }
+          @include mediaQuery() {
+            &:hover {
+              & > svg > path:first-child {
+                fill: #000;
+              }
+
+              & > svg > path:last-child {
+                fill: #98989a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ========================
+		slider end  フットボールページから流用
+  ======================== */
+
+
+  /* ========================
+		lp-movie  end フットボールページから流用
+	======================== */
+  .lp-club {
+    margin-top:80px; 
+    @include mediaQuery(){
+      margin-top: 85px;
+    }
+    > h2 {
+      @include font_family(primary);
+      font-size: 25px;
+      font-weight: bold;
+      margin-left: 12px;
+      letter-spacing: 1.5px;
+      @include mediaQuery(desktopFollow) {
+        text-align: center;
+        font-size: 29px;
+      }
+    }
+    &_logo {
+      display: flex;
+      background-color: $colorGray_l2;
+      overflow-x: scroll;
+      margin-top: 20px;
+      @include mediaQuery(desktopFollow) {
+        justify-content: center;
+      }
+      img {
+        width: 51px;
+        height: 44px;
+        margin: 39px 9px 23px;
+        @include mediaQuery() {
+          margin: 39px 13px 23px;
+        }
+      }
+    }
+
+    &_images {
+      background: #000;
+      @include mediaQuery() {
+        display: flex;
+      }
+      a {
+        position: relative;
+        display: block;
+      }
+      h3 {
+        position: absolute;
+        bottom: 3%;
+        left: 5%;
+        color: #fff;
+        text-decoration: underline;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.3;
+        font-size: 14px;
+        @include mediaQuery() {
+          font-size: 18px;
+        }
+      }
+
+      &_left {
+        display: flex;
+        @include mediaQuery() {
+          width: 50%;
+        }
+        &_top {
+          img{
+            @include mediaQuery(mobileOnly){
+              vertical-align: bottom;
+            }
+          }
+          
+          @include mediaQuery() {
+            width: 50%;
+          }
+        }
+        &_bottom {
+          @include mediaQuery() {
+            width: 50%;
+          }
+        }
+      }
+      &_right {
+        @include mediaQuery() {
+          width: 50%;
+        }
+        &_bottom {
+          display: flex;
+          > a {
+            @include mediaQuery() {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lp-world {
+    position: relative;
+    color: #fff;
+
+    &_textBox {
+      position: absolute;
+      bottom: 47%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      text-align: center;
+      color: #fff;
+      @include mediaQuery() {
+        bottom: 42%;
+      }
+      > h2 {
+        font-size: 28px;
+        white-space: nowrap;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        @include font_family(primary);
+        @include mediaQuery() {
+          font-size: 36px;
+        }
+      }
+      > p {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      > a {
+        color: #fff;
+        text-decoration: underline;
+        margin-top: 24px;
+        display: inline-block;
+        padding: 5px;
+        @include mediaQuery() {
+          margin-top: 5px;
+        }
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+/*------------------
+ END house_of_jerseys
+------------------- */

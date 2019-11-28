@@ -1,0 +1,77 @@
+
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity:0.7;
+  z-index: 99;
+}
+
+.modal-content{
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  margin-left: -35%;
+  width: 70%;
+  height: auto;
+  max-width: 810px;
+  max-height: 90%;
+  display: none;
+  z-index: 100;
+  padding: 3% 0;
+  background-color: #fff;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+.tensu{
+  width: 90%;
+  margin: 0 auto 3%;
+  text-align: center;
+  font-size: 3rem;
+  color: red;
+  font-weight: bold;
+  border-bottom: solid 3px red;
+  border-top: solid 3px red;
+}
+
+.modal-shoujou{
+  position: relative;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  border: solid 3px #ddd;
+}
+.modal-shoujou img{
+  display: block;
+}
+
+.quiz{
+  // clip: rect(1px ,1px ,1px ,1px);
+  position: absolute !important;
+  // background-image: url(../img/btn_C_off.png);
+}
+.label{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 18px;
+  border-radius: 3px;
+  transition: all .2s;
+  background-image:url(../img/btn_C_off.png);
+  // background: red;
+  // background-image: url(../img/btn_C_off.png);
+}
+.active{
+  background-image: url(../img/btn_C_on.png);
+}
+.quiz ,.label{
+  // background:#B54A4A;
+  // background-image: url(../img/btn_C_off.png);
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+}
+
+
